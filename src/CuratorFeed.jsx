@@ -89,8 +89,6 @@ class App extends Component {
       content.length &&
       content.split(" ").map((c, idx) => {
         if (/\r|\n/.exec(c)) {
-          // console.log(c.split("\n"));
-          // Do nothing
           return null;
         } else {
           return parseString(c, idx);
@@ -136,7 +134,9 @@ class App extends Component {
                   </div>
                 </div>
                 <div className="CuratorFeed__post">
-                  <p>{this.parsePostContent(p.text)}</p>
+                  <p style={{ wordBreak: "break-all" }}>
+                    {this.parsePostContent(p.text)}
+                  </p>
                 </div>
               </li>
             );

@@ -1,10 +1,11 @@
 {
-  "name": "react-curator-feed-wrapper",
+  "name": "react-curator-feed",
   "version": "1.0.0",
   "main": "wrapper.js",
   "scripts": {
     "example": "node server.js",
-    "bundle-js-dev": "webpack --config ./webpack.dev.config.js",
+    "test": "jest",
+    "bundle-js-dev": "webpack --config ./webpack.dev.config.js --watch",
     "bundle-js-prod": "webpack -p --config ./webpack.prod.config.js",
     "bundle-js": "npm run test && npm run bundle-js-dev && npm run bundle-js-prod"
   },
@@ -28,8 +29,8 @@
     "babel-runtime": "^6.5.0",
     "date-fns": "^1.29.0",
     "express": "^4.13.4",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.0",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
     "webpack": "^1.13.0"
   }
 }
