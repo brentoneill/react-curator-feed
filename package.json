@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "wrapper.js",
   "scripts": {
+    "test": "jest -o",
+    "test:all": "jest",
+    "test:watch": "jest --watch",
     "example": "node server.js",
-    "test": "jest",
     "bundle-js-dev": "webpack --config ./webpack.dev.config.js --watch",
     "bundle-js-prod": "webpack -p --config ./webpack.prod.config.js",
     "bundle-js": "npm run test && npm run bundle-js-dev && npm run bundle-js-prod"
@@ -42,7 +44,7 @@
   },
   "jest": {
     "setupFiles": [
-      "./src/setupTests.js"
+      "./setupTests.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
