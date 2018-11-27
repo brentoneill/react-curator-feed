@@ -18,7 +18,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.5.0",
-    "babel-core": "^6.5.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.5.0",
     "babel-polyfill": "^6.5.0",
@@ -32,5 +32,20 @@
     "react": "16.6.0",
     "react-dom": "16.6.0",
     "webpack": "^1.13.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
