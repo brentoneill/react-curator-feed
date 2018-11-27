@@ -56,7 +56,7 @@ class App extends Component {
         // Handle links
         return (
           <span
-            style={{ wordBreak: "initial" }}
+            style={{ wordBreak: "initial", display: "block", margin: "10px 0" }}
             key={idx}
             className="CuratorFeed--post-link"
           >
